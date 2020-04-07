@@ -1,0 +1,19 @@
+print("Please Enter The elements in 1d array.Press '* to stop'")
+value=''
+array=[]
+while value!='*':
+	value=input('Please Enter the number or "*"::')
+	array2d=[]
+	While value!='*':
+		array2d.append(value)
+		value=input('Please Enter the number or "*"::')
+	array.append(array2d)
+
+#array.sort()
+#array.pop(1)
+#array.remove(6)
+#array.insert(0,100)
+print(array)
+print(len(array))
+
+	
