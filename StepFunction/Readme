@@ -1,0 +1,83 @@
+Step Function
+
+ASL - amazon state language - json based
+1. To get input from user -
+
+STATES :
+PASS - Just the Execution Block with no logic
+WAIT -  to wait for particular time period
+TASK  - to connect to lambda execution
+ACTIVITY - to connect to EC2 execution
+FAIL -To handle the FAILSTATE
+Succeed -  just contain the Type
+CHOICE - Just like switch in programming, branching logic.
+         contains the choices filed
+
+parallel - [branches]
+
+ERROR HANDLING IN StepFunction
+
+States.All - wild card all errors
+states.Timeout
+states.TaskFaild
+states.Permission
+
+Fallback state   with the help of catch
+retries
+========================================================
+{
+ "StartAt": "calculate",
+  "States": {
+    "calculate":{
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:911904338222:function:calculator",
+      "InputPath":"$.lambda", # to get the input from specific block
+      "ResultPath":"$.lambda.Result", # setting the output to specfic block
+      "OutputPath":"$.lambda", #to filter the output
+      "End": true
+    }
+
+  }
+
+}
+
+
+
+=======================================
+
+
+
+
+{
+    "Comment": "Insert your JSON here",
+  	 "lambda":{
+       "operation": "add",
+  	   "input":{
+         "value1": 10,
+         "value2":20
+     }
+     },
+  "moreData":"asadfahfhh"
+}
+
+
+
+=====================================
+1. API gateway to invoke StepFunction
+2. CloudWatch invoke and Lambda exeute
+
+
+
+==================================
+
+1. Determine the type of file
+
+
+=========================================
+
+{
+    "Comment": "Insert your JSON here",
+  	"results":{
+      "fileType":"pdf"
+    }
+}
