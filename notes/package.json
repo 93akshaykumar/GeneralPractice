@@ -1,0 +1,21 @@
+{
+  "name": "sls-notes-backhand",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.661.0",
+    "moment": "^2.24.0",
+    "underscore": "^1.10.2",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "serverless-domain-manager": "^3.3.2",
+    "serverless-offline": "^6.1.4"
+  }
+}
