@@ -11,7 +11,7 @@
   "dependencies": {
     "aws-sdk": "^2.661.0",
     "moment": "^2.24.0",
-    "underscore": "^1.10.2",
+    "underscore": "^1.12.1",
     "uuid": "^7.0.3"
   },
   "devDependencies": {
